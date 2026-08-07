@@ -13,7 +13,7 @@ class ModelRunner:
 
         self.device = device or (
             "cuda"
-            if torch.cuda.is_available()
+            if torch.cuda.is_available() #checks my system for gpu
             else "cpu"
         )
 
