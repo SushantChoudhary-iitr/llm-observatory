@@ -26,7 +26,7 @@ class HookManager:
 
         for name, module in self.model.named_modules():
 
-            if self._should_instrument(name, module):
+            if self._should_instrument(name, module): # _should_instrument is like a filter functio, return true for specific shit
 
                 pre_hook = module.register_forward_pre_hook(
                     self._create_pre_hook(name)
